@@ -1,0 +1,305 @@
+/* Reset margins and paddings */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Fill from top, proper spacing */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.input {
+  @apply p-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white w-full;
+}
+
+/* Header styling */
+.header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+}
+
+/* Title styling */
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+/* Nav styling */
+.nav-links {
+  display: flex;
+  gap: 30px; /* space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Make content start below header */
+.main-content {
+  padding: 40px;
+}
+
+.page-theme{
+  border: none;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+.page-theme:hover{
+  text-decoration: underline;
+}
+
+/* Theme Styles */
+.light {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Nav link styling */
+.nav-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: inherit; /* Inherits text color from .light or .dark */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+:root {
+  --primary-gradient: linear-gradient(to right, #ff6ec4, #7873f5);
+  --button-gradient: linear-gradient(to right, #00c6ff, #0072ff);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --blur: blur(8px);
+}
+
+.light {
+  --background: #ffffff;
+  --text-color: #121212;
+  --text-secondary: #333333;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.dark {
+  --background: #121212;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.home-hero {
+  padding: 100px 20px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: var(--text-color);
+  background: var(--background);
+}
+
+
+.highlight-box {
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  max-width: 880px;
+  width: 100%;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.highlight-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.highlight-box ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3rem;
+  line-height: 2.4;
+  color: var(--text-secondary);
+}
+
+.fab-button {
+  background: var(--button-gradient);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
+}
+
+.fab-button:hover {
+  opacity: 0.9;
+}
+
+.Signup-button{
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-family: cursive;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.Signup-button:hover{
+  text-decoration: underline;
+  opacity: 0.95;
+}
+.job-container {
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.job-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.job-form input,
+.job-form select,
+.job-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.job-form textarea {
+  resize: vertical;
+}
+
+.job-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.job-table th,
+.job-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.job-table th {
+  background-color: #f2f2f2;
+}
+
+.add-another {
+  margin-top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+}
+.job-container {
+  max-width: 100%;
+  padding: 20px;
+  overflow-x: auto; /* allows table to scroll only when necessary */
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* evenly distributes columns */
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-table th,
+.job-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  vertical-align: top;
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+
+.job-table th {
+  background-color: #f7f7f7;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+
+
